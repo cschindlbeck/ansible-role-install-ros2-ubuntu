@@ -9,7 +9,7 @@
 - name: "Check ROS2 compatibilty with current OS"
   assert:
     that:
-      - install_ros2_distro == "{{ item.ros2_distro }}"
+      - install_ros2_distro == item.ros2_distro
     fail_msg: "{{ ansible_distribution }} {{ ansible_distribution_version }} {{ ansible_distribution_release }} does NOT support ROS {{ install_ros2_distro }}"
   when: ansible_distribution_release == item.os_release
   with_items:
