@@ -28,6 +28,9 @@ None.
 |-------------------------|---------------------------------------------------------|---------------------|
 | `install_ros2_distro`   | Short name of the ROS distribution to install           | `dashing`           |
 | `install_ros2`          | Name of the meta to install _(`ros-base`, `desktop`)_   | `ros-base`          |
+| `install_ros2_rti_connext`   | XXX    | `true`           |
+| `install_ros2_rti_fastrtps`          | xxx | `false`          |
+| `install_ros2_packages` | List of ros2 packages to be installed | |
 
 
 ## :link: Dependencies

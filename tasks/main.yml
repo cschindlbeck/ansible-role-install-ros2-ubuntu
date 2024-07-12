@@ -74,3 +74,13 @@
     echo: true
     timeout: 600
   when: install_ros2_rti_fastrtps and ansible_facts.packages[install_ros2_rti_fastrtps_pkg] is not defined
+
+
+- name: Install ROS2 Packages
+  apt:
+    name: "{{ packages }}"
+    allow_unauthenticated: true
+  vars:
+    packages: "{{ 'ros-' + install_ros2_distro + '-' + item }}"
+  with_items: "{{ install_ros2_packages }}"
+  when: (install_ros2_packages is defined) and (install_ros2_packages is not none)

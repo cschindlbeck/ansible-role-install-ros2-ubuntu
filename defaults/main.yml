@@ -4,3 +4,4 @@ install_ros2_distro: "galactic"
 install_ros2: "ros-base"
 install_ros2_rti_connext: true
 install_ros2_rti_fastrtps: false
+install_ros2_packages:
