@@ -14,7 +14,7 @@
   when: ansible_distribution_release == item.os_release
   with_items:
     - { os_release: "bionic", ros2_distro: "dashing" }
-    - { os_release: "focal", ros2_distro: "humble" }
+    - { os_release: "focal", ros2_distro: "galactic" }
     - { os_release: "jammy", ros2_distro: "humble" }
 
 - name: "Install ROS2 '{{ install_ros2_distro }}' on '{{ ansible_distribution_release }}'"
